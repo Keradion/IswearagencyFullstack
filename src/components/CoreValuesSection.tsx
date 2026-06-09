@@ -11,8 +11,17 @@ export default function CoreValuesSection() {
   ];
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-16">
+    <section className="py-24 relative overflow-hidden">
+      {/* Light Background Image */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img 
+          src="/gallery/light-bg.png" 
+          alt="Modern Light Background" 
+          className="w-full h-full object-cover opacity-80"
+        />
+        <div className="absolute inset-0 bg-white/70"></div>
+      </div>
+      <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-16 relative z-10">
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <h2 className="text-5xl md:text-6xl xl:text-7xl font-serif font-bold text-brand-primary mb-6">
             {t.valuesTitle}
@@ -28,7 +37,7 @@ export default function CoreValuesSection() {
             return (
               <div 
                 key={index}
-                className="group bg-brand-sand rounded-2xl p-10 hover:-translate-y-2 transition-all duration-300"
+                className="group bg-white/80 backdrop-blur-md border border-white shadow-xl rounded-2xl p-10 hover:-translate-y-2 transition-all duration-300"
               >
                 <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-6 shadow-sm group-hover:shadow-md transition-all">
                   <Icon className="text-brand-secondary" size={28} />

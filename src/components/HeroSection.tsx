@@ -28,7 +28,7 @@ export default function HeroSection() {
             <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg" alt="Saudi Arabia" className="w-10 h-7 object-cover shadow-sm border border-white/20 rounded-sm" />
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Kuwait.svg" alt="Kuwait" className="w-10 h-7 object-cover shadow-sm border border-white/20 rounded-sm" />
           </div>
-          <p className="text-2xl md:text-3xl text-white/90 font-light text-center sm:text-left">
+          <p className="text-2xl md:text-3xl text-brand-secondary font-medium text-center sm:text-left drop-shadow-md">
             {t.heroSubtitle}
           </p>
         </div>
