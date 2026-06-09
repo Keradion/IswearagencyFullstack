@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function HeroSection() {
@@ -9,7 +9,7 @@ export default function HeroSection() {
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/gallery/hero-bg.jpg" 
+          src="/gallery/hero-bg-arabic.png" 
           alt="Hero Background" 
           className="w-full h-full object-cover object-center"
         />
@@ -19,7 +19,7 @@ export default function HeroSection() {
 
       <div className="relative z-10 w-full max-w-[1920px] mx-auto px-4 md:px-8 xl:px-16 pt-20 pb-32 flex flex-col items-center text-center">
         {/* Main Content */}
-        <h1 className="text-5xl md:text-6xl xl:text-7xl font-serif font-bold text-white leading-[1.1] tracking-tight max-w-4xl animate-fade-in-up">
+        <h1 className="text-6xl md:text-7xl xl:text-8xl font-serif font-bold text-white leading-[1.1] tracking-tight max-w-5xl animate-fade-in-up">
           {t.heroTitle}
         </h1>
         
@@ -28,12 +28,12 @@ export default function HeroSection() {
             <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg" alt="Saudi Arabia" className="w-10 h-7 object-cover shadow-sm border border-white/20 rounded-sm" />
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Kuwait.svg" alt="Kuwait" className="w-10 h-7 object-cover shadow-sm border border-white/20 rounded-sm" />
           </div>
-          <p className="text-xl md:text-2xl text-white/90 font-light text-center sm:text-left">
+          <p className="text-2xl md:text-3xl text-white/90 font-light text-center sm:text-left">
             {t.heroSubtitle}
           </p>
         </div>
 
-        <p className="mt-4 text-brand-sand/80 text-lg max-w-2xl leading-relaxed font-light animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <p className="mt-6 text-brand-sand/80 text-xl md:text-2xl max-w-3xl leading-relaxed font-light animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           {t.heroDescription}
         </p>
 

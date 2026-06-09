@@ -14,10 +14,10 @@ export default function CoreValuesSection() {
     <section className="py-24 bg-white">
       <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-16">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-primary mb-6">
+          <h2 className="text-5xl md:text-6xl xl:text-7xl font-serif font-bold text-brand-primary mb-6">
             {t.valuesTitle}
           </h2>
-          <p className="text-lg text-brand-gray font-light">
+          <p className="text-brand-gray max-w-2xl mx-auto text-xl md:text-2xl font-light">
             {t.valuesSubtitle}
           </p>
         </div>
@@ -33,10 +33,8 @@ export default function CoreValuesSection() {
                 <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-6 shadow-sm group-hover:shadow-md transition-all">
                   <Icon className="text-brand-secondary" size={28} />
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-brand-primary mb-4">
-                  {val.title}
-                </h3>
-                <p className="text-brand-gray leading-relaxed">
+                <h3 className="text-2xl font-serif font-bold text-brand-primary mb-4">{val.title}</h3>
+                <p className="text-brand-gray leading-relaxed text-lg">
                   {val.desc}
                 </p>
               </div>

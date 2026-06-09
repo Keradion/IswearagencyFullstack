@@ -5,8 +5,17 @@ export default function AboutSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-24 bg-white relative overflow-hidden">
-      <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-16">
+    <section id="about" className="py-24 relative overflow-hidden">
+      {/* Light Background Image */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img 
+          src="/gallery/light-bg.png" 
+          alt="Modern Light Background" 
+          className="w-full h-full object-cover opacity-80"
+        />
+        <div className="absolute inset-0 bg-white/70"></div>
+      </div>
+      <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-16 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Left Content */}
@@ -16,30 +25,30 @@ export default function AboutSection() {
               <span>{t.navAbout}</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-primary leading-tight">
+            <h2 className="text-5xl md:text-6xl xl:text-7xl font-serif font-bold text-brand-primary leading-tight">
               {t.aboutTitle}
             </h2>
             
-            <p className="text-brand-gray text-lg leading-relaxed mt-4">
+            <p className="text-brand-gray text-xl md:text-2xl leading-relaxed mt-4">
               {t.aboutText}
             </p>
 
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="flex items-start gap-3">
-                <CheckCircle2 className="text-brand-secondary shrink-0 mt-1" size={20} />
-                <span className="text-brand-slate font-medium">{t.aboutFeature1}</span>
+                <CheckCircle2 className="text-brand-secondary shrink-0 mt-1" size={24} />
+                <span className="text-brand-slate font-medium text-lg">{t.aboutFeature1}</span>
               </div>
               <div className="flex items-start gap-3">
-                <CheckCircle2 className="text-brand-secondary shrink-0 mt-1" size={20} />
-                <span className="text-brand-slate font-medium">{t.aboutFeature2}</span>
+                <CheckCircle2 className="text-brand-secondary shrink-0 mt-1" size={24} />
+                <span className="text-brand-slate font-medium text-lg">{t.aboutFeature2}</span>
               </div>
               <div className="flex items-start gap-3">
-                <CheckCircle2 className="text-brand-secondary shrink-0 mt-1" size={20} />
-                <span className="text-brand-slate font-medium">{t.aboutFeature3}</span>
+                <CheckCircle2 className="text-brand-secondary shrink-0 mt-1" size={24} />
+                <span className="text-brand-slate font-medium text-lg">{t.aboutFeature3}</span>
               </div>
               <div className="flex items-start gap-3">
-                <CheckCircle2 className="text-brand-secondary shrink-0 mt-1" size={20} />
-                <span className="text-brand-slate font-medium">{t.aboutFeature4}</span>
+                <CheckCircle2 className="text-brand-secondary shrink-0 mt-1" size={24} />
+                <span className="text-brand-slate font-medium text-lg">{t.aboutFeature4}</span>
               </div>
             </div>
 

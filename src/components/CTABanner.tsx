@@ -11,10 +11,10 @@ export default function CTABanner() {
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-secondary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3"></div>
         
         <div className="relative z-10">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">
+          <h2 className="text-5xl md:text-6xl xl:text-7xl font-serif font-bold text-white mb-6">
             {t.ctaTitle}
           </h2>
-          <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto">
+          <p className="text-white/90 text-xl md:text-2xl mb-10 max-w-2xl mx-auto font-light">
             {t.ctaSubtitle}
           </p>
           <a href="#contact" className="inline-block bg-brand-secondary hover:bg-brand-secondary-light text-brand-primary text-sm uppercase tracking-wider font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-xl hover:-translate-y-1">

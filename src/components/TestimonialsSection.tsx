@@ -11,36 +11,40 @@ export default function TestimonialsSection() {
 
   const testimonials = [
     {
-      name: 'Amina',
-      role: 'Domestic Worker, Kuwait',
-      text: 'I Swear Agency changed my life. They handled all my paperwork and found me a great family to work for in Kuwait.',
+      name: t.testi1Name,
+      role: t.testi1Role,
+      text: t.testi1Text,
       image: '/gallery/media__1780938363928.jpg'
     },
     {
-      name: 'Mohammed',
-      role: 'Employer, Saudi Arabia',
-      text: 'The staff provided by this agency are highly trained and professional. The whole process was smooth and transparent.',
+      name: t.testi2Name,
+      role: t.testi2Role,
+      text: t.testi2Text,
       image: '/gallery/media__1780938368768.jpg'
     },
     {
-      name: 'Sara',
-      role: 'Nanny, Saudi Arabia',
-      text: 'I felt supported every step of the way, from training in Ethiopia to my arrival in Saudi Arabia. Highly recommended.',
+      name: t.testi3Name,
+      role: t.testi3Role,
+      text: t.testi3Text,
       image: '/gallery/media__1780938370864.jpg'
-    },
-    {
-      name: 'Fatima',
-      role: 'Domestic Worker, Kuwait',
-      text: 'Excellent service and genuine care for the workers. I am very happy with my placement.',
-      image: '/gallery/media__1780938366520.jpg'
     }
   ];
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-16">
+    <section className="py-24 relative overflow-hidden">
+      {/* Light Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/gallery/light-bg.png" 
+          alt="Modern Light Background" 
+          className="w-full h-full object-cover opacity-80"
+        />
+        <div className="absolute inset-0 bg-white/30"></div>
+      </div>
+
+      <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-16 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-primary mb-4">
+          <h2 className="text-5xl md:text-6xl xl:text-7xl font-serif font-bold text-brand-primary mb-6">
             {t.testiTitle}
           </h2>
           <div className="w-24 h-1 bg-brand-secondary mx-auto"></div>
@@ -49,45 +53,45 @@ export default function TestimonialsSection() {
         <div className="max-w-6xl mx-auto pb-12">
           <Swiper
             style={{
-              '--swiper-pagination-color': '#F59E0B',
+              '--swiper-pagination-color': '#D97706',
               '--swiper-pagination-bullet-inactive-color': '#CBD5E1',
               '--swiper-pagination-bullet-inactive-opacity': '1',
             } as any}
             slidesPerView={1}
-            spaceBetween={30}
+            spaceBetween={40}
             breakpoints={{
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
             loop={true}
-            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            autoplay={{ delay: 6000, disableOnInteraction: false }}
             pagination={{ clickable: true, dynamicBullets: true }}
             modules={[Autoplay, Pagination]}
-            className="w-full !pb-16"
+            className="w-full !pb-20"
           >
             {testimonials.map((testi, index) => (
               <SwiperSlide key={index} className="h-auto">
-                <div className="bg-brand-sand rounded-2xl p-8 h-full flex flex-col relative mt-8">
+                <div className="bg-white/80 backdrop-blur-md border border-white rounded-3xl p-10 h-full flex flex-col relative mt-10 shadow-xl hover:-translate-y-2 transition-transform duration-500">
                   {/* Floating Avatar */}
-                  <div className="absolute -top-8 left-8 w-16 h-16 rounded-full border-4 border-white overflow-hidden shadow-lg">
+                  <div className="absolute -top-10 left-10 w-20 h-20 rounded-full border-4 border-white overflow-hidden shadow-xl">
                     <img src={testi.image} alt={testi.name} className="w-full h-full object-cover" />
                   </div>
                   
-                  <Quote className="text-brand-secondary/30 absolute top-6 right-6" size={40} />
+                  <Quote className="text-brand-secondary/20 absolute top-8 right-8" size={48} />
                   
-                  <div className="flex gap-1 mb-4 mt-6">
+                  <div className="flex gap-1 mb-6 mt-8">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={16} className="fill-brand-secondary text-brand-secondary" />
+                      <Star key={i} size={18} className="fill-brand-secondary text-brand-secondary" />
                     ))}
                   </div>
                   
-                  <p className="text-brand-gray italic flex-grow mb-6 leading-relaxed">
+                  <p className="text-brand-slate text-lg italic flex-grow mb-8 leading-relaxed font-medium">
                     "{testi.text}"
                   </p>
                   
                   <div>
-                    <h4 className="font-bold text-brand-primary text-lg">{testi.name}</h4>
-                    <p className="text-brand-secondary text-sm font-medium">{testi.role}</p>
+                    <h4 className="font-bold font-serif text-brand-primary text-xl mb-1">{testi.name}</h4>
+                    <p className="text-brand-gray text-sm font-semibold uppercase tracking-wider">{testi.role}</p>
                   </div>
                 </div>
               </SwiperSlide>

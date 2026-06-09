@@ -5,18 +5,27 @@ export default function ContactSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="contact" className="py-24 bg-white relative">
-      <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-16">
+    <section id="contact" className="py-24 relative overflow-hidden border-t border-gray-100">
+      {/* Light Background Image */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img 
+          src="/gallery/light-bg.png" 
+          alt="Modern Light Background" 
+          className="w-full h-full object-cover opacity-80"
+        />
+        <div className="absolute inset-0 bg-white/70"></div>
+      </div>
+      <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-16 relative z-10">
         {/* Minimalist Header */}
         <div className="max-w-3xl mb-16">
           <div className="inline-flex items-center gap-2 text-brand-primary font-bold text-[12px] uppercase tracking-widest mb-4">
             <span className="w-8 h-[2px] bg-brand-secondary"></span>
             <span>{t.navContact}</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-slate mb-6">
+          <h2 className="text-5xl md:text-6xl xl:text-7xl font-serif font-bold text-brand-slate mb-6">
             Let's start a conversation.
           </h2>
-          <p className="text-brand-gray text-lg">
+          <p className="text-brand-gray text-xl md:text-2xl font-light">
             Whether you have a question or need assistance with your next step, our team is ready to help you navigate the process.
           </p>
         </div>
@@ -78,8 +87,8 @@ export default function ContactSection() {
               <div className="w-20 h-20 rounded-full bg-brand-primary/10 mx-auto flex items-center justify-center mb-6">
                 <MapPin size={32} className="text-brand-primary" />
               </div>
-              <h4 className="text-2xl font-serif font-bold text-brand-slate mb-4">Visit Our Office</h4>
-              <p className="text-brand-gray mb-8">{t.addressText}</p>
+              <h4 className="text-3xl font-serif font-bold text-brand-slate mb-4">Visit Our Office</h4>
+              <p className="text-brand-gray text-lg mb-8">{t.addressText}</p>
               
               <a 
                 href="https://goo.gl/maps/placeholder" 

@@ -23,8 +23,17 @@ export default function GallerySection() {
   ];
 
   return (
-    <section id="gallery" className="py-24 bg-brand-sand min-h-screen flex flex-col justify-center">
-      <div className="w-full max-w-[1920px] mx-auto px-4 md:px-8 xl:px-16">
+    <section id="gallery" className="py-24 relative overflow-hidden">
+      {/* Light Background Image */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img 
+          src="/gallery/light-bg.png" 
+          alt="Modern Light Background" 
+          className="w-full h-full object-cover opacity-80"
+        />
+        <div className="absolute inset-0 bg-white/70"></div>
+      </div>
+      <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-16 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 text-brand-primary font-bold text-[12px] uppercase tracking-widest mb-4">
             <span className="w-8 h-[2px] bg-brand-secondary"></span>

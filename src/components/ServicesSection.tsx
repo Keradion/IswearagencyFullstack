@@ -5,15 +5,25 @@ export default function ServicesSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="services" className="py-24 bg-brand-sand relative">
-      <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-16">
+    <section id="services" className="py-24 relative overflow-hidden">
+      {/* Light Background Image */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img 
+          src="/gallery/light-bg.png" 
+          alt="Modern Light Background" 
+          className="w-full h-full object-cover opacity-80"
+        />
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-sm"></div>
+      </div>
+
+      <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-16 relative z-10">
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 text-brand-primary font-bold text-[12px] uppercase tracking-widest mb-4">
             <span className="w-8 h-[2px] bg-brand-secondary"></span>
             <span>{t.navServices}</span>
             <span className="w-8 h-[2px] bg-brand-secondary"></span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-primary">
+          <h2 className="text-5xl md:text-6xl xl:text-7xl font-serif font-bold text-brand-primary mb-16 text-center">
             {t.servicesTitle}
           </h2>
         </div>
@@ -25,25 +35,33 @@ export default function ServicesSection() {
               {t.forWorkers}
             </h3>
             
-            <div className="bg-white rounded-xl p-8 flex gap-6 hover:shadow-lg transition-shadow duration-300 relative overflow-hidden group">
+            <div className="bg-white/80 backdrop-blur-md border border-white rounded-xl p-8 flex gap-6 hover:shadow-lg transition-shadow duration-300 relative overflow-hidden group">
               <div className="absolute left-0 top-0 bottom-0 w-2 bg-brand-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
               <div className="w-14 h-14 rounded-full bg-brand-sand flex items-center justify-center shrink-0">
                 <PlaneTakeoff className="text-brand-secondary" size={28} />
               </div>
               <div>
-                <h4 className="text-xl font-bold text-brand-primary mb-2">{t.serv1Title}</h4>
-                <p className="text-brand-gray">{t.serv1Desc}</p>
+                <h4 className="text-2xl font-serif font-bold text-brand-primary mb-3">
+                  {t.serv1Title}
+                </h4>
+                <p className="text-brand-gray text-lg leading-relaxed">
+                  {t.serv1Desc}
+                </p>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-8 flex gap-6 hover:shadow-lg transition-shadow duration-300 relative overflow-hidden group">
+            <div className="bg-white/80 backdrop-blur-md border border-white rounded-xl p-8 flex gap-6 hover:shadow-lg transition-shadow duration-300 relative overflow-hidden group">
               <div className="absolute left-0 top-0 bottom-0 w-2 bg-brand-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
               <div className="w-14 h-14 rounded-full bg-brand-sand flex items-center justify-center shrink-0">
                 <FileText className="text-brand-secondary" size={28} />
               </div>
               <div>
-                <h4 className="text-xl font-bold text-brand-primary mb-2">{t.serv2Title}</h4>
-                <p className="text-brand-gray">{t.serv2Desc}</p>
+                <h4 className="text-2xl font-serif font-bold text-brand-primary mb-3">
+                  {t.serv2Title}
+                </h4>
+                <p className="text-brand-gray text-lg leading-relaxed">
+                  {t.serv2Desc}
+                </p>
               </div>
             </div>
           </div>
@@ -54,25 +72,33 @@ export default function ServicesSection() {
               {t.forEmployers}
             </h3>
             
-            <div className="bg-white rounded-xl p-8 flex gap-6 hover:shadow-lg transition-shadow duration-300 relative overflow-hidden group">
+            <div className="bg-white/80 backdrop-blur-md border border-white rounded-xl p-8 flex gap-6 hover:shadow-lg transition-shadow duration-300 relative overflow-hidden group">
               <div className="absolute left-0 top-0 bottom-0 w-2 bg-brand-secondary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
               <div className="w-14 h-14 rounded-full bg-brand-sand flex items-center justify-center shrink-0">
                 <UserCheck className="text-brand-primary" size={28} />
               </div>
               <div>
-                <h4 className="text-xl font-bold text-brand-primary mb-2">{t.serv3Title}</h4>
-                <p className="text-brand-gray">{t.serv3Desc}</p>
+                <h4 className="text-2xl font-serif font-bold text-brand-primary mb-3">
+                  {t.serv3Title}
+                </h4>
+                <p className="text-brand-gray text-lg leading-relaxed">
+                  {t.serv3Desc}
+                </p>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-8 flex gap-6 hover:shadow-lg transition-shadow duration-300 relative overflow-hidden group">
+            <div className="bg-white/80 backdrop-blur-md border border-white rounded-xl p-8 flex gap-6 hover:shadow-lg transition-shadow duration-300 relative overflow-hidden group">
               <div className="absolute left-0 top-0 bottom-0 w-2 bg-brand-secondary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
               <div className="w-14 h-14 rounded-full bg-brand-sand flex items-center justify-center shrink-0">
                 <Briefcase className="text-brand-primary" size={28} />
               </div>
               <div>
-                <h4 className="text-xl font-bold text-brand-primary mb-2">{t.serv4Title}</h4>
-                <p className="text-brand-gray">{t.serv4Desc}</p>
+                <h4 className="text-2xl font-serif font-bold text-brand-primary mb-3">
+                  {t.serv4Title}
+                </h4>
+                <p className="text-brand-gray text-lg leading-relaxed">
+                  {t.serv4Desc}
+                </p>
               </div>
             </div>
           </div>
