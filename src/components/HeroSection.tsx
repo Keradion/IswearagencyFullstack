@@ -5,13 +5,15 @@ export default function HeroSection() {
   const { t } = useLanguage();
 
   return (
-    <div className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-brand-primary">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src="/gallery/hero-bg-arabic.png" 
           alt="Hero Background" 
           className="w-full h-full object-cover object-center"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-brand-primary/80 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-brand-primary-dark/90 via-transparent to-transparent"></div>
