@@ -95,7 +95,7 @@ export const translations = {
     readMore: 'Read More',
     // Contact & Footer
     contactTitle: 'Contact Us',
-    addressText: 'Autobs Tera, Yologya building 6th floor 540/608',
+    addressText: 'Autobus Tera, Yologya building office 608',
     managerText: 'Manager:',
     visitOffice: 'Visit Our Office',
     openMaps: 'Open in Google Maps',
@@ -190,7 +190,7 @@ export const translations = {
     readMore: 'ተጨማሪ ያንብቡ',
     // Contact & Footer
     contactTitle: 'አግኙን',
-    addressText: 'አውቶብስ ተራ፣ ዮሎግያ ህንፃ 6ኛ ፎቅ 540/608',
+    addressText: 'አውቶብስ ተራ፣ ዮሎግያ ህንፃ 6ኛ ፎቅ 608',
     managerText: 'ስራ አስኪያጅ:',
     visitOffice: 'ቢሯችንን ይጎብኙ',
     openMaps: 'በ Google ካርታዎች ይክፈቱ',
@@ -285,7 +285,7 @@ export const translations = {
     readMore: 'Dabalata Dubbisi',
     // Contact & Footer
     contactTitle: 'Nu Qunnamaa',
-    addressText: 'Awtobis Tera, Gamoo Yologya darbii 6ffaa 540/608',
+    addressText: 'Awtobis Tera, Gamoo Yologya darbii 6ffaa 608',
     managerText: 'Hoji Gaggeessaa:',
     visitOffice: 'Waajjira Keenya Daawwadhaa',
     openMaps: 'Kaartaa Google irratti bani',
@@ -380,7 +380,7 @@ export const translations = {
     readMore: 'اقرأ المزيد',
     // Contact & Footer
     contactTitle: 'اتصل بنا',
-    addressText: 'أوتوبس تيرا، مبنى يولوجيا الطابق السادس 540/608',
+    addressText: 'أوتوبس تيرا، مبنى يولوجيا مكتب 608',
     managerText: 'المدير:',
     visitOffice: 'قم بزيارة مكتبنا',
     openMaps: 'افتح في خرائط جوجل',
@@ -475,7 +475,7 @@ export const translations = {
     readMore: 'ተወሳኺ ኣንብቡ',
     // Contact & Footer
     contactTitle: 'ርኸቡና',
-    addressText: 'ኣውቶብስ ተራ፣ ዮሎግያ ህንጻ 6ይ ደርቢ 540/608',
+    addressText: 'ኣውቶብስ ተራ፣ ዮሎግያ ህንጻ 6ይ ደርቢ 608',
     managerText: 'ኣካያዲ ስራሕ:',
     visitOffice: 'ቤ/ጽሕፈትና ብጽሑ',
     openMaps: 'ኣብ Google Maps ክፈቱ',
