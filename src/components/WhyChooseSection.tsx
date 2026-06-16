@@ -5,10 +5,26 @@ export default function WhyChooseSection() {
   const { t } = useLanguage();
 
   const features = [
-    { icon: Shield, title: t.why1 },
-    { icon: Sparkles, title: t.why2 },
-    { icon: Target, title: t.why3 },
-    { icon: Globe, title: t.why4 }
+    {
+      icon: Shield,
+      title: t.why1,
+      desc: 'Comprehensive visa & documentation support — we handle paperwork, contract review, and compliance so you travel with confidence.'
+    },
+    {
+      icon: Sparkles,
+      title: t.why2,
+      desc: 'Personalized pre-departure training and skills matching to ensure you meet employer expectations and thrive on arrival.'
+    },
+    {
+      icon: Target,
+      title: t.why3,
+      desc: 'Proven job placement and employer partnerships — we connect you to vetted opportunities that match your career goals.'
+    },
+    {
+      icon: Globe,
+      title: t.why4,
+      desc: 'End-to-end travel and aftercare support, including onboarding assistance and local follow-up so you are never alone abroad.'
+    }
   ];
 
   return (
@@ -41,7 +57,7 @@ export default function WhyChooseSection() {
                   </div>
                   <h3 className="text-2xl font-serif font-bold text-white mb-1">{feat.title}</h3>
                   <p className="text-brand-sand/70 text-lg leading-relaxed">
-                    Placeholder text explaining why choosing us for {feat.title} is the best choice you can make. We ensure top quality.
+                    {feat.desc}
                   </p>
                 </div>
               );

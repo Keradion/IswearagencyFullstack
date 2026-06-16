@@ -28,7 +28,9 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 mt-4 text-brand-sand/70 text-sm font-light">
             <span>{t.addressText}</span>
             <span className="hidden md:block w-1 h-1 bg-brand-secondary rounded-full"></span>
-            <a href="tel:+251911234567" className="hover:text-brand-secondary transition-colors">+251 911 234 567</a>
+            <a href="tel:0112755458" className="hover:text-brand-secondary transition-colors">0112755458</a>
+            <span className="hidden md:inline px-2">|</span>
+            <a href="tel:0962535353" className="hover:text-brand-secondary transition-colors">0962535353</a>
             <span className="hidden md:block w-1 h-1 bg-brand-secondary rounded-full"></span>
             <a href="mailto:support@iswearagency.com" className="hover:text-brand-secondary transition-colors">support@iswearagency.com</a>
           </div>
