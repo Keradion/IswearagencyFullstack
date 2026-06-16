@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
+import VideoShowcaseSection from './components/VideoShowcaseSection';
 import StatsSection from './components/StatsSection';
 import CoreValuesSection from './components/CoreValuesSection';
 import ServicesSection from './components/ServicesSection';
@@ -22,6 +23,7 @@ function App() {
         <main className="flex-grow">
           <HeroSection />
           <AboutSection />
+          <VideoShowcaseSection />
           <StatsSection />
           <CoreValuesSection />
           <ServicesSection />

@@ -85,6 +85,10 @@ export const translations = {
     gallerySubtitle: 'See the dedicated maids we have successfully deployed to our satisfied clients overseas.',
     viewFullImage: 'View Full Image',
     deployedStaff: 'Successfully Deployed',
+    // Videos
+    navVideos: 'Videos',
+    videosTitle: 'Watch Our Story',
+    videosSubtitle: 'See our team in action — from training to successful deployment abroad.',
     // CTA Banner
     ctaTitle: 'Ready to Join Our Success Stories?',
     ctaSubtitle: 'Be part of our growing community...',
@@ -180,6 +184,10 @@ export const translations = {
     gallerySubtitle: 'ለደንበኞቻችን በተሳካ ሁኔታ የላክናቸውን ታማኝ የቤት ሰራተኞችን ይመልከቱ።',
     viewFullImage: 'ሙሉ ምስል ይመልከቱ',
     deployedStaff: 'በተሳካ ሁኔታ የተላከች',
+    // Videos
+    navVideos: 'ቪዲዮዎች',
+    videosTitle: 'ታሪካችንን ይመልከቱ',
+    videosSubtitle: 'ቡድናችን በስራ ላይ ይመልከቱ — ከስልጠና እስከ በተሳካ ሁኔታ ወደ ውጭ ሀገር መላክ።',
     // CTA Banner
     ctaTitle: 'የስኬት ታሪኮቻችንን ለመቀላቀል ዝግጁ ነዎት?',
     ctaSubtitle: 'የሚያድገው ማህበረሰባችን አካል ይሁኑ...',
@@ -275,6 +283,10 @@ export const translations = {
     gallerySubtitle: 'Hojjettoota keenya milkaa\'inaan maamiltoota keenyaaf ramadamanii fi hojii jalqaban daawwadhaa.',
     viewFullImage: 'Suuraa Guutuu Ilaali',
     deployedStaff: 'Milkaa\'inaan Ergamte',
+    // Videos
+    navVideos: 'Viidiyoo',
+    videosTitle: 'Seenaa Keenya Daawwadhaa',
+    videosSubtitle: 'Garee keenya hojii irra jiru ilaalaa — leenjii irraa kaasee hanga biyya alaatti milkaa\'inaan ergamutti.',
     // CTA Banner
     ctaTitle: 'Seenaa Milkaa\'inaa Keenyaatti Makamuuf Qophiidhaa?',
     ctaSubtitle: 'Hawaasa keenya guddachaa jiru keessaa tokko ta\'aa...',
@@ -370,6 +382,10 @@ export const translations = {
     gallerySubtitle: 'شاهد العمالة المنزلية التي قمنا بنشرها بنجاح لعملائنا الراضين في الخارج.',
     viewFullImage: 'عرض الصورة الكاملة',
     deployedStaff: 'تم التوظيف بنجاح',
+    // Videos
+    navVideos: 'فيديو',
+    videosTitle: 'شاهد قصتنا',
+    videosSubtitle: 'شاهد فريقنا أثناء العمل — من التدريب إلى النشر الناجح في الخارج.',
     // CTA Banner
     ctaTitle: 'هل أنت مستعد للانضمام إلى قصص نجاحنا؟',
     ctaSubtitle: 'كن جزءًا من مجتمعنا المتنامي...',
@@ -465,6 +481,10 @@ export const translations = {
     gallerySubtitle: 'ነቶም ብዓወት ናብ ዓማዊልና ዝላኣኽናዮም ብሉጻት ሰራሕተኛታት ገዛ ተመልከቱ።',
     viewFullImage: 'ምሉእ ስእሊ ርኣዩ',
     deployedStaff: 'ብዓወት ዝተላእከት',
+    // Videos
+    navVideos: 'ቪድዮታት',
+    videosTitle: 'ዛንታና ተመልከቱ',
+    videosSubtitle: 'ጋንታና ኣብ ስራሕ ተመልከቱ — ካብ ስልጠና ክሳብ ብዓወት ናብ ወጻኢ ሃገራት ምልኣኽ።',
     // CTA Banner
     ctaTitle: 'ኣብ ዛንታታት ዓወትና ንምስታፍ ድሉዋት ዲኹም?',
     ctaSubtitle: 'ኣካል ናይቲ ዝዓቢ ዘሎ ማሕበረሰብና ኩኑ...',

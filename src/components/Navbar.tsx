@@ -36,6 +36,7 @@ export default function Navbar() {
           <a href="#about" className="hover:text-brand-secondary transition-colors">{t.navAbout}</a>
           <a href="#services" className="hover:text-brand-secondary transition-colors">{t.navServices}</a>
           <a href="#gallery" className="hover:text-brand-secondary transition-colors">{t.navGallery}</a>
+          <a href="#videos" className="hover:text-brand-secondary transition-colors">{t.navVideos}</a>
           <a href="#blog" className="hover:text-brand-secondary transition-colors">{t.navBlog}</a>
           <a href="#contact" className="hover:text-brand-secondary transition-colors">{t.navContact}</a>
         </div>
@@ -92,6 +93,7 @@ export default function Navbar() {
           <a href="#about" onClick={toggleMobileMenu} className="hover:text-brand-secondary transition-colors">{t.navAbout}</a>
           <a href="#services" onClick={toggleMobileMenu} className="hover:text-brand-secondary transition-colors">{t.navServices}</a>
           <a href="#gallery" onClick={toggleMobileMenu} className="hover:text-brand-secondary transition-colors">{t.navGallery}</a>
+          <a href="#videos" onClick={toggleMobileMenu} className="hover:text-brand-secondary transition-colors">{t.navVideos}</a>
           <a href="#blog" onClick={toggleMobileMenu} className="hover:text-brand-secondary transition-colors">{t.navBlog}</a>
           <a href="#contact" onClick={toggleMobileMenu} className="hover:text-brand-secondary transition-colors">{t.navContact}</a>
           
