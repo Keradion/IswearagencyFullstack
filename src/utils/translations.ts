@@ -95,7 +95,7 @@ export const translations = {
     readMore: 'Read More',
     // Contact & Footer
     contactTitle: 'Contact Us',
-    addressText: 'Autobus Tera, Yologya building office 608',
+    addressText: 'Autobus Tera, Yologya building 6th floor office 608',
     managerText: 'Manager:',
     visitOffice: 'Visit Our Office',
     openMaps: 'Open in Google Maps',
@@ -380,7 +380,7 @@ export const translations = {
     readMore: 'اقرأ المزيد',
     // Contact & Footer
     contactTitle: 'اتصل بنا',
-    addressText: 'أوتوبس تيرا، مبنى يولوجيا مكتب 608',
+    addressText: 'أوتوبس تيرا، مبنى يولوجيا الطابق السادس مكتب 608',
     managerText: 'المدير:',
     visitOffice: 'قم بزيارة مكتبنا',
     openMaps: 'افتح في خرائط جوجل',
