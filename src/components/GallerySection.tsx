@@ -19,7 +19,9 @@ export default function GallerySection() {
     '/gallery/media__1780938363928.jpg',
     '/gallery/media__1780938366520.jpg',
     '/gallery/media__1780938368768.jpg',
-    '/gallery/media__1780938370864.jpg'
+    '/gallery/media__1780938370864.jpg',
+    '/gallery/media__1781604878939.jpg',
+    '/gallery/media__1781604888873.jpg'
   ];
 
   return (
