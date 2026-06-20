@@ -88,7 +88,7 @@ export default function BlogSection() {
         {!isLoading && posts.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {posts.map((post, idx) => (
-              <Link key={post._id} to={`/blog/${post.slug}`} className="group cursor-pointer block">
+              <Link key={post._id} to={`/blog/${post.slug}`} target="_blank" rel="noopener noreferrer" className="group cursor-pointer block">
                 <div className="overflow-hidden rounded-2xl mb-6 relative">
                   <img
                     src={getImage(post, idx)}
