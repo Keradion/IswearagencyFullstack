@@ -12,11 +12,10 @@ const PORT = process.env.PORT || 5000;
 
 // ── Middleware ──────────────────────────────────────────────────────────────
 app.use(cors({
-  origin: [
-    'http://localhost:5173', 
-    'http://localhost:4173', 
-    'https://iswearagency-fullstack.vercel.app'
-  ],
+  origin: function (origin, callback) {
+    // Allow any origin
+    callback(null, true);
+  },
   credentials: true,
 }));
 app.use(express.json({ limit: '10mb' }));
