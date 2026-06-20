@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import type { Language } from '../utils/translations';
 import { languageNames } from '../utils/translations';
-import { Globe, Menu, X } from 'lucide-react';
+import { Globe, Menu, X, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useAuth } from '../context/AuthContext';
 
 export default function Navbar() {
   const { language, setLanguage, t } = useLanguage();
+  const { isAdmin } = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -39,6 +41,11 @@ export default function Navbar() {
           <a href="#videos" className="hover:text-brand-secondary transition-colors">{t.navVideos}</a>
           <a href="#blog" className="hover:text-brand-secondary transition-colors">{t.navBlog}</a>
           <a href="#contact" className="hover:text-brand-secondary transition-colors">{t.navContact}</a>
+          {isAdmin && (
+            <a href="/admin" className="inline-flex items-center gap-1.5 text-brand-primary hover:text-brand-secondary transition-colors">
+              <ShieldCheck size={14} /> Admin
+            </a>
+          )}
         </div>
 
         {/* Right Actions */}
@@ -96,6 +103,11 @@ export default function Navbar() {
           <a href="#videos" onClick={toggleMobileMenu} className="hover:text-brand-secondary transition-colors">{t.navVideos}</a>
           <a href="#blog" onClick={toggleMobileMenu} className="hover:text-brand-secondary transition-colors">{t.navBlog}</a>
           <a href="#contact" onClick={toggleMobileMenu} className="hover:text-brand-secondary transition-colors">{t.navContact}</a>
+          {isAdmin && (
+            <a href="/admin" onClick={toggleMobileMenu} className="inline-flex items-center gap-2 text-brand-secondary hover:text-brand-primary transition-colors">
+              <ShieldCheck size={18} /> Admin Panel
+            </a>
+          )}
           
           <a href="#contact" onClick={toggleMobileMenu} className="mt-8 w-full text-center bg-brand-primary text-white text-sm uppercase tracking-wider font-bold py-4 px-8 rounded-full shadow-lg">
             {t.navContact}

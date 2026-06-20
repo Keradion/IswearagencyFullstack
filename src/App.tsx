@@ -1,3 +1,11 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { LanguageProvider } from './context/LanguageContext';
+import { AuthProvider } from './context/AuthContext';
+import ProtectedRoute from './components/admin/ProtectedRoute';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
+
+// Public page sections
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -13,31 +21,57 @@ import BlogSection from './components/BlogSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
-import { LanguageProvider } from './context/LanguageContext';
+
+function PublicSite() {
+  return (
+    <div className="min-h-screen bg-brand-sand font-sans flex flex-col">
+      <Navbar />
+      <main className="flex-grow">
+        <HeroSection />
+        <AboutSection />
+        <VideoShowcaseSection />
+        <StatsSection />
+        <CoreValuesSection />
+        <ServicesSection />
+        <WhyChooseSection />
+        <TestimonialsSection />
+        <GallerySection />
+        <CTABanner />
+        <BlogSection />
+        <ContactSection />
+      </main>
+      <Footer />
+      <FloatingActions />
+    </div>
+  );
+}
 
 function App() {
   return (
-    <LanguageProvider>
-      <div className="min-h-screen bg-brand-sand font-sans flex flex-col">
-        <Navbar />
-        <main className="flex-grow">
-          <HeroSection />
-          <AboutSection />
-          <VideoShowcaseSection />
-          <StatsSection />
-          <CoreValuesSection />
-          <ServicesSection />
-          <WhyChooseSection />
-          <TestimonialsSection />
-          <GallerySection />
-          <CTABanner />
-          <BlogSection />
-          <ContactSection />
-        </main>
-        <Footer />
-        <FloatingActions />
-      </div>
-    </LanguageProvider>
+    <BrowserRouter>
+      <AuthProvider>
+        <LanguageProvider>
+          <Routes>
+            {/* Public site */}
+            <Route path="/" element={<PublicSite />} />
+
+            {/* Admin routes */}
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route
+              path="/admin"
+              element={
+                <ProtectedRoute>
+                  <AdminDashboard />
+                </ProtectedRoute>
+              }
+            />
+
+            {/* Catch-all → home */}
+            <Route path="*" element={<PublicSite />} />
+          </Routes>
+        </LanguageProvider>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 
