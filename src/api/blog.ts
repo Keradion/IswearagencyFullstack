@@ -13,13 +13,15 @@ async function apiFetch<T>(
   endpoint: string,
   options?: RequestInit
 ): Promise<T> {
-  const res = await fetch(`${API_BASE}${endpoint}`, {
+  const fetchOptions: RequestInit = {
+    ...options,
     headers: {
       'Content-Type': 'application/json',
-      ...options?.headers,
+      ...(options?.headers || {}),
     },
-    ...options,
-  });
+  };
+
+  const res = await fetch(`${API_BASE}${endpoint}`, fetchOptions);
 
   let data: any = null;
   const contentType = res.headers.get('content-type');
