@@ -21,6 +21,7 @@ import BlogSection from './components/BlogSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
+import BlogPostPage from './pages/BlogPostPage';
 
 function PublicSite() {
   return (
@@ -54,6 +55,7 @@ function App() {
           <Routes>
             {/* Public site */}
             <Route path="/" element={<PublicSite />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
 
             {/* Admin routes */}
             <Route path="/admin/login" element={<AdminLogin />} />

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Loader2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { fetchPublishedPosts } from '../api/blog';
@@ -87,7 +88,7 @@ export default function BlogSection() {
         {!isLoading && posts.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {posts.map((post, idx) => (
-              <div key={post._id} className="group cursor-pointer">
+              <Link key={post._id} to={`/blog/${post.slug}`} className="group cursor-pointer block">
                 <div className="overflow-hidden rounded-2xl mb-6 relative">
                   <img
                     src={getImage(post, idx)}
@@ -121,7 +122,7 @@ export default function BlogSection() {
                 <div className="flex items-center gap-2 text-brand-secondary font-bold text-sm uppercase tracking-wider group-hover:gap-4 transition-all">
                   {t.readMore} <ArrowRight size={16} />
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         )}
