@@ -26,6 +26,34 @@ app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
+// ── Temporary Seed Route (For Render Free Tier) ──────────────────────────────
+import bcrypt from 'bcryptjs';
+import User from './models/User.js';
+
+app.get('/api/seed', async (req, res) => {
+  try {
+    const ADMIN_EMAIL = 'mesfin@iswearagency.com';
+    const ADMIN_PASSWORD = 'mesfin@iswear';
+    
+    const existing = await User.findOne({ email: ADMIN_EMAIL });
+    if (existing) {
+      return res.json({ message: 'Admin user already exists!', email: ADMIN_EMAIL });
+    }
+
+    const passwordHash = await bcrypt.hash(ADMIN_PASSWORD, 12);
+    await User.create({
+      email: ADMIN_EMAIL,
+      passwordHash,
+      role: 'admin',
+      name: 'Mesfin',
+    });
+
+    res.json({ message: '✅ Admin user created successfully!', email: ADMIN_EMAIL });
+  } catch (err) {
+    res.status(500).json({ error: 'Seed failed: ' + err.message });
+  }
+});
+
 // ── 404 handler ─────────────────────────────────────────────────────────────
 app.use((_req, res) => {
   res.status(404).json({ error: 'Route not found' });
